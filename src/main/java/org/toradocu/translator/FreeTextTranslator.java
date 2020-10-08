@@ -55,6 +55,10 @@ public class FreeTextTranslator {
         CodeSnippet sentenceSnippet = determineSnippet(commentContent, sentence);
         // Classifier entry point: Verify sentence contains an equivalence declaration...
         equivalenceMatch = EquivalenceMatcher.findEquivalencesInComment(sentence, sentenceSnippet);
+        if (equivalenceMatch.getMethodSignatures().isEmpty()) {
+          // TODO Entry point of WMD for equivalences. See what needs to be improved or changed.
+          equivalenceMatch = EquivalenceMatcher.findEquivalencesSemantic(sentence, sentenceSnippet);
+        }
 
         if (!equivalenceMatch.getMethodSignatures().isEmpty()) {
           //          Toradocu.configuration.ALL_SENTENCES = Toradocu.configuration.ALL_SENTENCES +
