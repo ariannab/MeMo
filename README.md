@@ -5,7 +5,6 @@ The identified MRs are automatically translated into executable test oracles tha
 As of now the prototype works on Javadoc method summaries, and thus produces Java assertions.
 
 ### Releases
-Please find the latest stable release under <a href=https://github.com/ariannab/MeMo/releases> the releases page</a>.
 
 To produce the executable (`MeMo-1.0-all.jar`), after cloning the repo launch `./gradlew shadowJar`. 
 
@@ -26,7 +25,7 @@ Each first-level object is the representation of a method of the class. Inside e
 > <p>You will find an expected translation for method applyInverseTo(org.apache.commons.math3.geometry.euclidean.threed.FieldRotation<T> r).
 
 
-To verify MeMo performances on such dataset, clone this repo and launch `./gradlew accuracyEQ`, which will show the translations produced on the present ground truth. For each method of each class, MeMo may produce exactly the translation written in the file (`Correct`), a non-empty translation that differs from the expected one (`Wrong`), an empty translation when condition is not empty (`Missing`), or a non-empty translation when no condition was expected (`Spurious`).
+To verify MeMo performances on such dataset, clone this repo and launch `./gradlew accuracyEQComplete`, which will show the translations produced on the present ground truth. For each method of each class, MeMo may produce exactly the translation written in the file (`Correct`), a non-empty translation that differs from the expected one (`Wrong`), an empty translation when condition is not empty (`Missing`), or a non-empty translation when no condition was expected (`Spurious`).
 
 ### Mutation analysis experiments
 Please go to <a href=https://gitlab.software.imdea.org/arianna.blasi/memo-experiments-2021>this repository</a> for complete instructions on how to reproduce the Mutation analysis results. These experiments practically show how MeMo assertions can detect bugs.
