@@ -727,7 +727,7 @@
       "member": "list(java.io.FilenameFilter filter)",
       "comment": "Returns an array of strings naming the files and directories in the directory denoted by this abstract pathname that satisfy the specified filter. The behavior of this method is the same as that of the #list() method, except that the strings in the returned array must satisfy the filter. If the given filter is null then all names are accepted. Otherwise, a name satisfies the filter if and only if the value true results when the FilenameFilter#accept FilenameFilter.accept(File,&nbsp;String) method of the filter is invoked on this abstract pathname and the name of a file or directory in the directory that it denotes.",
       "kind": "FreeText",
-      "condition": "java.util.Arrays.equals(methodResultID, receiverObjectClone.list())"
+      "condition": "if (filter == null) { java.util.Arrays.equals(methodResultID, receiverObjectClone.list()) }"
     }
   },
   {
@@ -782,7 +782,7 @@
       "member": "listFiles(java.io.FilenameFilter filter)",
       "comment": "Returns an array of abstract pathnames denoting the files and directories in the directory denoted by this abstract pathname that satisfy the specified filter. The behavior of this method is the same as that of the #listFiles() method, except that the pathnames in the returned array must satisfy the filter. If the given filter is null then all pathnames are accepted. Otherwise, a pathname satisfies the filter if and only if the value true results when the FilenameFilter#accept FilenameFilter.accept(File,&nbsp;String) method of the filter is invoked on this abstract pathname and the name of a file or directory in the directory that it denotes.",
       "kind": "FreeText",
-      "condition": "java.util.Arrays.equals(methodResultID, receiverObjectClone.listFiles())"
+      "condition": "if (filter == null) { java.util.Arrays.equals(methodResultID, receiverObjectClone.listFiles()) }"
     }
   },
   {
@@ -814,7 +814,7 @@
       "member": "listFiles(java.io.FileFilter filter)",
       "comment": "Returns an array of abstract pathnames denoting the files and directories in the directory denoted by this abstract pathname that satisfy the specified filter. The behavior of this method is the same as that of the #listFiles() method, except that the pathnames in the returned array must satisfy the filter. If the given filter is null then all pathnames are accepted. Otherwise, a pathname satisfies the filter if and only if the value true results when the FileFilter#accept FileFilter.accept(File) method of the filter is invoked on the pathname.",
       "kind": "FreeText",
-      "condition": "java.util.Arrays.equals(methodResultID, receiverObjectClone.listFiles())"
+      "condition": " if (filter == null) { java.util.Arrays.equals(methodResultID, receiverObjectClone.listFiles()) }"
     }
   },
   {

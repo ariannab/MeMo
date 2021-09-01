@@ -641,7 +641,7 @@
     "equivalence": {
       "comment": "Same as in SuggestBuilder#setGlobalText(String), but in the suggestion scope.",
       "kind": "FreeText",
-      "condition": "methodResultID.equals(setGlobalText(args[0]))"
+      "condition": ""
     }
   },
   {
