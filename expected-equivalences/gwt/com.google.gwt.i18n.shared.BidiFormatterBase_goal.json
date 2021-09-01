@@ -545,7 +545,7 @@
     "equivalence": {
       "comment": "Like #estimateDirection(String, boolean), but assumes isHtml is false.",
       "kind": "FreeText",
-      "condition": "methodResultID.equals(receiverObjectID.estimateDirection(args[0], false)"
+      "condition": "methodResultID.equals(receiverObjectID.estimateDirection(args[0], false))"
     }
   }
 ]

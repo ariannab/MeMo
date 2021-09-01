@@ -291,7 +291,7 @@
       "member": "getDisplayName()",
       "comment": "Returns a long standard time name of this TimeZone suitable for presentation to the user in the default locale. This method is equivalent to: <pre> getDisplayName(false, #LONG, Locale.getDefault(Locale.Category#DISPLAY)) </pre>",
       "kind": "FreeText",
-      "condition": "methodResultID == getDisplayName(false, java.util.TimeZone.LONG, Locale.getDefault(Locale.Category#DISPLAY))"
+      "condition": "methodResultID == getDisplayName(false, java.util.TimeZone.LONG, Locale.getDefault(Locale.Category.DISPLAY))"
     }
   },
   {

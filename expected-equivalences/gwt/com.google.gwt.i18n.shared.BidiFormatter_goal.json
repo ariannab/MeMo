@@ -498,7 +498,7 @@
     "equivalence": {
       "comment": "Like #dirAttr(String, boolean), but assumes isHtml is false.",
       "kind": "FreeText",
-      "condition": "methodResultID.equals(dirAttr(args[0], false)"
+      "condition": "methodResultID.equals(dirAttr(args[0], false))"
     }
   },
   {
