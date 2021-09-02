@@ -319,7 +319,7 @@
     "equivalence": {
       "comment": "Same as #prefix(String) with full fuzzy options see FuzzyOptions.Builder",
       "kind": "FreeText",
-      "condition": "methodResultID.equals(receiverObjectClone.prefix(args[0]))"
+      "condition": ""
     }
   },
   {

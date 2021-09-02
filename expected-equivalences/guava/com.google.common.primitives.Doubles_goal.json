@@ -97,7 +97,7 @@
     "equivalence": {
       "comment": "Compares the two specified double values. The sign of the value returned is the same as that of ((Double) a).{@linkplain Double#compareTo compareTo}(b). As with that method, NaN is treated as greater than all other values, and 0.0 > -0.0. <p>Note: this method simply delegates to the JDK method Double#compare. It is provided for consistency with the other primitive types, whose compare methods were not added to the JDK until JDK 7.",
       "kind": "FreeText",
-      "condition": ""
+      "condition": "java.lang.Math.signum(methodResultID)==java.lang.Math.signum( ((Double) args[0]).compareTo(args[1]) ) && methodResultID==( java.lang.Double.compare(args[0], args[1]) )"
     }
   },
   {

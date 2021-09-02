@@ -452,7 +452,7 @@
     "equivalence": {
       "comment": "Removes all ranges from this RangeSet (optional operation). After this operation, this.contains(c) will return false for all c. <p>This is equivalent to remove(Range.all()).",
       "kind": "FreeText",
-      "condition": ""
+      "condition": "receiverObjectID.clear(); receiverObjectClone.remove(Range.all()); receiverObjectID.equals(receiverObjectClone);"
     }
   },
   {

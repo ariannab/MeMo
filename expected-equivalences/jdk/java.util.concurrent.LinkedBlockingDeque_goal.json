@@ -1353,7 +1353,7 @@
       "member": "toArray(T[] a)",
       "comment": "Returns an array containing all of the elements in this deque, in proper sequence; the runtime type of the returned array is that of the specified array. If the deque fits in the specified array, it is returned therein. Otherwise, a new array is allocated with the runtime type of the specified array and the size of this deque. If this deque fits in the specified array with room to spare (i.e., the array has more elements than this deque), the element in the array immediately following the end of the deque is set to null. Like the #toArray() method, this method acts as bridge between array-based and collection-based APIs. Further, this method allows precise control over the runtime type of the output array, and may, under certain circumstances, be used to save allocation costs. Suppose x is a deque known to contain only strings. The following code can be used to dump the deque into a newly allocated array of String}:  {@code String[] y = x.toArray(new String[0]); Note that toArray(new Object[0]) is identical in function to toArray().",
       "kind": "FreeText",
-      "condition": ""
+      "condition": "java.util.Arrays.equals(receiverObjectID.toArray(), receiverObjectID.toArray(new Object[0]))"
     }
   },
   {

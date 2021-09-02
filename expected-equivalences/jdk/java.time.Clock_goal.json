@@ -124,7 +124,7 @@
       "member": "tickSeconds(java.time.ZoneId zone)",
       "comment": "Obtains a clock that returns the current instant ticking in whole seconds using best available system clock.  This clock will always have the nano-of-second field set to zero. This ensures that the visible time ticks in whole seconds. The underlying clock is the best available system clock, equivalent to using #system(ZoneId).  Implementations may use a caching strategy for performance reasons. As such, it is possible that the start of the second observed via this clock will be later than that observed directly via the underlying clock.  The returned implementation is immutable, thread-safe and Serializable. It is equivalent to tick(system(zone), Duration.ofSeconds(1)).",
       "kind": "FreeText",
-      "condition": "methodResultID.equals(java.time.Clock.system(args[0]))"
+      "condition": "methodResultID.equals(Clock.tick(Clock.system(args[0]), Duration.ofSeconds(1)))"
     }
   },
   {
@@ -156,7 +156,7 @@
       "member": "tickMinutes(java.time.ZoneId zone)",
       "comment": "Obtains a clock that returns the current instant ticking in whole minutes using best available system clock.  This clock will always have the nano-of-second and second-of-minute fields set to zero. This ensures that the visible time ticks in whole minutes. The underlying clock is the best available system clock, equivalent to using #system(ZoneId).  Implementations may use a caching strategy for performance reasons. As such, it is possible that the start of the minute observed via this clock will be later than that observed directly via the underlying clock.  The returned implementation is immutable, thread-safe and Serializable. It is equivalent to tick(system(zone), Duration.ofMinutes(1)).",
       "kind": "FreeText",
-      "condition": "methodResultID.equals(java.time.Clock.system(args[0]))"
+      "condition": "methodResultID.equals(Clock.tick(Clock.system(args[0]), Duration.ofMinutes(1)))"
     }
   },
   {
@@ -354,7 +354,7 @@
       "member": "millis()",
       "comment": "Gets the current millisecond instant of the clock.  This returns the millisecond-based instant, measured from 1970-01-01T00:00Z (UTC). This is equivalent to the definition of System#currentTimeMillis().  Most applications should avoid this method and use Instant to represent an instant on the time-line rather than a raw millisecond value. This method is provided to allow the use of the clock in high performance use cases where the creation of an object would be unacceptable.  The default implementation currently calls #instant.",
       "kind": "FreeText",
-      "condition": ""
+      "condition": "methodResultID.equals(receiverObjectID.instant())"
     }
   },
   {

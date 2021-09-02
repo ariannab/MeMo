@@ -383,7 +383,7 @@
     "equivalence": {
       "comment": "Like #getAttribute(String, Class), but returns the first existing attribute in a list of keys, instead of only one key. The key list order matters.",
       "kind": "FreeText",
-      "condition": "methodResultID.equals(receiverObjectClone.getAttribute(args[1][0], args[0]))"
+      "condition": ""
     }
   },
   {

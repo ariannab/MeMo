@@ -538,7 +538,7 @@
     "equivalence": {
       "comment": "Compares the two specified float values using float). You may prefer to invoke that method directly; this method exists only for consistency with the other utilities in this package. <p>Note: this method simply delegates to the JDK method Float#compare. It is provided for consistency with the other primitive types, whose compare methods were not added to the JDK until JDK 7.",
       "kind": "FreeText",
-      "condition": ""
+      "condition": "java.lang.Math.signum(methodResultID)==java.lang.Math.signum( ((Float) args[0]).compareTo(args[1]) ) && methodResultID==( java.lang.Float.compare(args[0], args[1]) )"
     }
   },
   {

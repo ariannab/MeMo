@@ -104,7 +104,7 @@
     "equivalence": {
       "comment": "Adds a point to the sample. Calling this method is equivalent to calling add(1.0, x, y).",
       "kind": "FreeText",
-      "condition": "add(1.0, args[0], args[1])"
+      "condition": "receiverObjectID.add(args[0], args[1]); receiverObjectClone.add(1.0, args[0], args[1]); receiverObjectClone.equals(receiverObjectID);"
     }
   },
   {

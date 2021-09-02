@@ -19,7 +19,7 @@
       "member": "getName()",
       "comment": "Returns the operating system name. This method is equivalent to System.getProperty(\"os.name\").",
       "kind": "FreeText",
-      "condition": ""
+      "condition": "methodResultID==(System.getProperty(\"os.name\"))"
     }
   },
   {
@@ -42,7 +42,7 @@
       "member": "getArch()",
       "comment": "Returns the operating system architecture. This method is equivalent to System.getProperty(\"os.arch\").",
       "kind": "FreeText",
-      "condition": ""
+      "condition": "methodResultID==(System.getProperty(\"os.arch\"))"
     }
   },
   {
@@ -65,7 +65,7 @@
       "member": "getVersion()",
       "comment": "Returns the operating system version. This method is equivalent to System.getProperty(\"os.version\").",
       "kind": "FreeText",
-      "condition": ""
+      "condition": "methodResultID==(System.getProperty(\"os.version\"))"
     }
   },
   {

@@ -327,7 +327,7 @@
       "member": "getAbsoluteFile()",
       "comment": "Returns the absolute form of this abstract pathname. Equivalent to new&nbsp;File(this.#getAbsolutePath).",
       "kind": "FreeText",
-      "condition": ""
+      "condition": "methodResultID.equals(new File(receiverObjectClone.getAbsolutePath()))"
     }
   },
   {
@@ -350,7 +350,7 @@
       "member": "getCanonicalPath()",
       "comment": "Returns the canonical pathname string of this abstract pathname.  A canonical pathname is both absolute and unique. The precise definition of canonical form is system-dependent. This method first converts this pathname to absolute form if necessary, as if by invoking the #getAbsolutePath method, and then maps it to its unique form in a system-dependent way. This typically involves removing redundant names such as \".\" and \"..\" from the pathname, resolving symbolic links (on UNIX platforms), and converting drive letters to a standard case (on Microsoft Windows platforms).  Every pathname that denotes an existing file or directory has a unique canonical form. Every pathname that denotes a nonexistent file or directory also has a unique canonical form. The canonical form of the pathname of a nonexistent file or directory may be different from the canonical form of the same pathname after the file or directory is created. Similarly, the canonical form of the pathname of an existing file or directory may be different from the canonical form of the same pathname after the file or directory is deleted.",
       "kind": "FreeText",
-      "condition": ""
+      "condition": "mathodResultID.equals(new File(receiverObjectID.getCanonicalPath()))"
     }
   },
   {
@@ -727,7 +727,7 @@
       "member": "list(java.io.FilenameFilter filter)",
       "comment": "Returns an array of strings naming the files and directories in the directory denoted by this abstract pathname that satisfy the specified filter. The behavior of this method is the same as that of the #list() method, except that the strings in the returned array must satisfy the filter. If the given filter is null then all names are accepted. Otherwise, a name satisfies the filter if and only if the value true results when the FilenameFilter#accept FilenameFilter.accept(File,&nbsp;String) method of the filter is invoked on this abstract pathname and the name of a file or directory in the directory that it denotes.",
       "kind": "FreeText",
-      "condition": "java.util.Arrays.equals(methodResultID, receiverObjectClone.list())"
+      "condition": "if (filter == null) { java.util.Arrays.equals(methodResultID, receiverObjectClone.list()) }"
     }
   },
   {
@@ -782,7 +782,7 @@
       "member": "listFiles(java.io.FilenameFilter filter)",
       "comment": "Returns an array of abstract pathnames denoting the files and directories in the directory denoted by this abstract pathname that satisfy the specified filter. The behavior of this method is the same as that of the #listFiles() method, except that the pathnames in the returned array must satisfy the filter. If the given filter is null then all pathnames are accepted. Otherwise, a pathname satisfies the filter if and only if the value true results when the FilenameFilter#accept FilenameFilter.accept(File,&nbsp;String) method of the filter is invoked on this abstract pathname and the name of a file or directory in the directory that it denotes.",
       "kind": "FreeText",
-      "condition": "java.util.Arrays.equals(methodResultID, receiverObjectClone.listFiles())"
+      "condition": "if (filter == null) { java.util.Arrays.equals(methodResultID, receiverObjectClone.listFiles()) }"
     }
   },
   {
@@ -814,7 +814,7 @@
       "member": "listFiles(java.io.FileFilter filter)",
       "comment": "Returns an array of abstract pathnames denoting the files and directories in the directory denoted by this abstract pathname that satisfy the specified filter. The behavior of this method is the same as that of the #listFiles() method, except that the pathnames in the returned array must satisfy the filter. If the given filter is null then all pathnames are accepted. Otherwise, a pathname satisfies the filter if and only if the value true results when the FileFilter#accept FileFilter.accept(File) method of the filter is invoked on the pathname.",
       "kind": "FreeText",
-      "condition": "java.util.Arrays.equals(methodResultID, receiverObjectClone.listFiles())"
+      "condition": " if (filter == null) { java.util.Arrays.equals(methodResultID, receiverObjectClone.listFiles()) }"
     }
   },
   {
@@ -1326,7 +1326,7 @@
       "member": "createTempFile(java.lang.String prefix, java.lang.String suffix, java.io.File directory)",
       "comment": "Creates a new empty file in the specified directory, using the given prefix and suffix strings to generate its name. If this method returns successfully then it is guaranteed that:  <li> The file denoted by the returned abstract pathname did not exist before this method was invoked, and <li> Neither this method nor any of its variants will return the same abstract pathname again in the current invocation of the virtual machine.  This method provides only part of a temporary-file facility. To arrange for a file created by this method to be deleted automatically, use the #deleteOnExit method.  The prefix argument must be at least three characters long. It is recommended that the prefix be a short, meaningful string such as \"hjb\" or \"mail\". The suffix argument may be null, in which case the suffix \".tmp\" will be used.  To create the new file, the prefix and the suffix may first be adjusted to fit the limitations of the underlying platform. If the prefix is too long then it will be truncated, but its first three characters will always be preserved. If the suffix is too long then it too will be truncated, but if it begins with a period character ('.') then the period and the first three characters following it will always be preserved. Once these adjustments have been made the name of the new file will be generated by concatenating the prefix, five or more internally-generated characters, and the suffix.  If the directory argument is null then the system-dependent default temporary-file directory will be used. The default temporary-file directory is specified by the system property java.io.tmpdir. On UNIX systems the default value of this property is typically \"/tmp\" or \"/var/tmp\"; on Microsoft Windows systems it is typically \"C:\\\\WINNT\\\\TEMP\". A different value may be given to this system property when the Java virtual machine is invoked, but programmatic changes to this property are not guaranteed to have any effect upon the temporary directory used by this method.",
       "kind": "FreeText",
-      "condition": ""
+      "condition": "methodResultID.equals(receiverObjectID.createTempFile(args[0], args[1], null))"
     }
   },
   {
@@ -1476,7 +1476,7 @@
       "member": "toString()",
       "comment": "Returns the pathname string of this abstract pathname. This is just the string returned by the #getPath method.",
       "kind": "FreeText",
-      "condition": ""
+      "condition": "methodResultID==(receiverObjectID.getPath())"
     }
   },
   {

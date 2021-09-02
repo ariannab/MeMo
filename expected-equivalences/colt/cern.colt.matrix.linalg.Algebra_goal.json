@@ -757,9 +757,9 @@
     ],
     "equivalence": {
       "member": "permuteColumns(cern.colt.matrix.DoubleMatrix2D A, int[] indexes, int[] work)",
-      "comment": "",
+      "comment": "Modifies the given matrix <tt>A</tt> such that it's columns are permuted as specified; Useful for pivoting. Column <tt>A[i]</tt> will go into column <tt>A[indexes[i]]</tt>. Equivalent to <tt>permuteRows(transpose(A), indexes, work)</tt>.",
       "kind": "FreeText",
-      "condition": ""
+      "condition": "methodResultID.equals(receiverObjectID.permuteRows(receiverObjectID.transpose(args[0]), args[1], args[2]))"
     }
   },
   {

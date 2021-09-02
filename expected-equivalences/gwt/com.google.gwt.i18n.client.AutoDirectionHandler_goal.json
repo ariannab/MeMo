@@ -27,7 +27,7 @@
     "equivalence": {
       "comment": "Operates like #addTo(Target, DirectionEstimator), but always uses a default DirectionEstimator, com.google.gwt.i18n.shared.WordCountDirectionEstimator.",
       "kind": "FreeText",
-      "condition": "methodResultID.equals(receiverObjectID.addTo(args[0], com.google.gwt.i18n.shared.WordCountDirectionEstimator))"
+      "condition": "methodResultID.equals(receiverObjectID.addTo(args[0], new com.google.gwt.i18n.shared.WordCountDirectionEstimator()))"
     }
   },
   {

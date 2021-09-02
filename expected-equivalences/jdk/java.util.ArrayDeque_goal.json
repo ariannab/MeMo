@@ -577,7 +577,7 @@
       "member": "element()",
       "comment": "Retrieves, but does not remove, the head of the queue represented by this deque. This method differs from #peek peek only in that it throws an exception if this deque is empty. This method is equivalent to #getFirst.",
       "kind": "FreeText",
-      "condition": ""
+      "condition": "methodResultID.equals(receiverObjectClone.getFirst())"
     }
   },
   {

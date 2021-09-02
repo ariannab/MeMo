@@ -951,7 +951,7 @@
       "member": "view()",
       "comment": "Constructs and returns a new view equal to the receiver. The view is a shallow clone. Calls clone() and casts the result.  Note that the view is not a deep copy. The returned matrix is backed by this matrix, so changes in the returned matrix are reflected in this matrix, and vice-versa.  Use #copy() if you want to construct an independent deep copy rather than a new view.",
       "kind": "FreeText",
-      "condition": ""
+      "condition": "methodResultID.equals((ObjectMatrix3D) receiverObjectID.clone())"
     }
   },
   {
