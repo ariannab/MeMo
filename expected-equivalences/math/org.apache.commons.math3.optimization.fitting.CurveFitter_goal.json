@@ -57,7 +57,7 @@
     "equivalence": {
       "comment": "Calling this method is equivalent to call addObservedPoint(1.0, x, y).",
       "kind": "FreeText",
-      "condition": ""
+      "condition": "receiverObjectID.addObservedPoint(args[0], args[1]); receiverObjectClone.addObservedPoint(1.0, args[0], args[1]); receiverObjectID.equals(receiverObjectClone);"
     }
   },
   {
