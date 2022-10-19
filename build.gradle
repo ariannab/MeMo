@@ -22,7 +22,7 @@ plugins {
 }
 //apply plugin: 'kotlin'
 
-mainClassName = "org.memo.Toradocu"
+mainClassName = "org.memo.MeMo"
 apply plugin: 'com.github.johnrengelman.shadow' // Workaround for https://github.com/johnrengelman/shadow/issues/336
 
 task downloadRandoop(type: Download) {
@@ -285,6 +285,8 @@ compileJava {
   options.compilerArgs << '-Xlint:unchecked,deprecation'
   options.encoding = 'UTF-8'
 }
+
+compileJava.dependsOn(downloadRandoop)
 
 repositories {
   mavenCentral()
